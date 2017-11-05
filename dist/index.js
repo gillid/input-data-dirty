@@ -39,6 +39,11 @@ var InputDataDirty = function () {
             return (0, _jquery2.default)('input[data-dirty]').add('select[data-dirty]').add('textarea[data-dirty]');
         }
     }, {
+        key: 'collectAll',
+        value: function collectAll() {
+            return (0, _jquery2.default)('input').add('select').add('textarea');
+        }
+    }, {
         key: 'bind',
         value: function bind(element) {
             var events = ['input', 'paste', 'cut', 'drop', 'change', 'focusout'];

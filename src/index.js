@@ -20,6 +20,10 @@ export default class InputDataDirty {
         return $('input[data-dirty]').add('select[data-dirty]').add('textarea[data-dirty]')
     }
 
+    static collectAll() {
+        return $('input').add('select').add('textarea')
+    }
+
     static bind(element) {
         let events = ['input', 'paste', 'cut', 'drop', 'change', 'focusout']
 
