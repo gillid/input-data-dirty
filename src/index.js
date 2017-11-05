@@ -37,7 +37,6 @@ export default class InputDataDirty {
     static setIsDirty(element) {
         setTimeout(function(){
             let isDirty = element.val().length > 0
-            console.log(isDirty);
 
             element.attr('data-dirty', isDirty)
         }, 10);
