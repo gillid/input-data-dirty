@@ -21,8 +21,13 @@ var InputDataDirty = function () {
 
     _createClass(InputDataDirty, null, [{
         key: 'init',
-        value: function init() {
-            var elements = InputDataDirty.collect();
+        value: function init(options) {
+            options = Object.assign({}, {
+                controlAll: false
+            }, options);
+
+            var elements = options.controlAll ? InputDataDirty.collect() : InputDataDirty.collectAll();
+
             elements.each(function () {
                 InputDataDirty.bind((0, _jquery2.default)(this));
                 InputDataDirty.setIsDirty((0, _jquery2.default)(this));
@@ -51,7 +56,6 @@ var InputDataDirty = function () {
         value: function setIsDirty(element) {
             setTimeout(function () {
                 var isDirty = element.val().length > 0;
-                console.log(isDirty);
 
                 element.attr('data-dirty', isDirty);
             }, 10);

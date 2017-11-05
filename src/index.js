@@ -4,7 +4,7 @@ import $ from 'jquery'
 
 export default class InputDataDirty {
     static init(options) {
-        let options = Object.assign({}, {
+        options = Object.assign({}, {
             controlAll: false
         }, options)
 
