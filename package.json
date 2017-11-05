@@ -1,6 +1,6 @@
 {
   "name": "input-data-dirty",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "InputDataDirty - controls [inputs, select, textarea] for having any value.",
   "main": "dist/index.js",
   "scripts": {
